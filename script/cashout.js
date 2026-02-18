@@ -6,17 +6,16 @@ document.getElementById('cashout-btn').addEventListener('click', ()=>{
     }
     const cashoutAmount = getValueFromInput('cashout-amount');
     const pin = getValueFromInput('cashout-pin');
-    const balanceElement = document.getElementById('balance');
-    const balance = balanceElement.innerText;
+    const currentBalance = getBalance();
 
     if (pin === '1234') {
-        const newBalance = Number(balance) - Number(cashoutAmount);
+        const newBalance = currentBalance - Number(cashoutAmount);
         if (newBalance < 0) {
-            alert(`Cashout amount must be less than or equal to ${balance}`);
+            alert('Invalid Amount');
             return;
         } else {
             alert('Cashout Successful');
-            balanceElement.innerText = newBalance;
+            setBalance(newBalance);
         }
     } else {
         alert('Invalid Pin');
