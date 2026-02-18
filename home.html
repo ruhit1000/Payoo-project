@@ -1,11 +1,88 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Payoo | Home</title>
+    <link rel="shortcut icon" href="./assets/logo.png" type="image/x-icon">
+
+    <!-- TailwindCSS and DaisyUI CDN-->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            font-family: "Outfit", sans-serif;
+        }
+
+        #transfer-money {
+            padding-inline: 0;
+        }
+    </style>
 </head>
-<body>
-    Home Page
+
+<body class="min-h-screen max-w-md bg-base-200 mx-auto">
+    <header class="border-b-2 border-gray-200 py-3">
+        <section class="w-11/12 mx-auto flex justify-between items-center">
+            <div class="left flex gap-2">
+                <div class="logo w-[60px]">
+                    <img src="./assets/logo.png" alt="">
+                </div>
+                <div class="balance-info">
+                    <h2 class="text-lg text-neutral font-extrabold">$ <span id="balance">45000</span></h2>
+                    <p class="text-sm text-neutral/50">Avilable Balance</p>
+                </div>
+            </div>
+            <div class="right">
+                <a href="./index.html" class="btn btn-outline border-gray-300 text-gray-500"><i
+                        class="fa-solid fa-arrow-right-from-bracket rotate-180"></i> Log Out</a>
+            </div>
+        </section>
+    </header>
+
+    <section class="w-11/12 mx-auto pt-8">
+        <h1 class="font-bold text-2xl/loose text-neutral">Welcome to Pay<span class="text-primary">oo</span></h1>
+        <p class="text-neutral/50 text-base/relaxed">Enjoy easy and convenient financial services with us. Cashout
+            charge is low and </p>
+
+        <div class="buttons grid grid-cols-3 my-6 gap-4">
+            <button class="btn flex-col h-full py-5 rounded-xl">
+                <img src="./assets/opt-1.png" alt="">
+                <p class="text-sm text-neutral/70 font-normal mt-1">Add Money</p>
+            </button>
+            <button class="btn flex-col h-full py-5 rounded-xl">
+                <img src="./assets/opt-2.png" alt="">
+                <p class="text-sm text-neutral/70 font-normal mt-1">Cashout</p>
+            </button>
+            <button id="transfer-money" class="btn flex-col h-full py-5 rounded-xl">
+                <img src="./assets/opt-3.png" alt="">
+                <p class="text-sm text-neutral/70 font-normal mt-1">Transfer Money</p>
+            </button>
+            <button class="btn flex-col h-full py-5 rounded-xl">
+                <img src="./assets/opt-4.png" alt="">
+                <p class="text-sm text-neutral/70 font-normal mt-1">Get Bonus</p>
+            </button>
+            <button class="btn flex-col h-full py-5 rounded-xl">
+                <img src="./assets/opt-5.png" alt="">
+                <p class="text-sm text-neutral/70 font-normal mt-1">Pay Bill</p>
+            </button>
+            <button class="btn flex-col h-full py-5 rounded-xl">
+                <img src="./assets/opt-6.png" alt="">
+                <p class="text-sm text-neutral/70 font-normal mt-1">Transactions</p>
+            </button>
+        </div>
+    </section>
 </body>
+
 </html>
