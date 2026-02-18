@@ -16,6 +16,7 @@ document.getElementById('cashout-btn').addEventListener('click', ()=>{
         } else {
             alert('Cashout Successful');
             setBalance(newBalance);
+            resetCashoutInputs();
         }
     } else {
         alert('Invalid Pin');

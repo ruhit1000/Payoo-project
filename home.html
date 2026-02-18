@@ -86,7 +86,41 @@
         </div>
     </section>
 
-    <section id="cashout" class="w-11/12 mx-auto py-7">
+    <section id="add-money" class="w-11/12 mx-auto py-7">
+        <h2 class="text-lg font-semibold opacity-90 mb-4">Add Money</h2>
+        <div class="card bg-base-100 w-full rounded-3xl">
+            <div class="card-body">
+                <fieldset class="fieldset space-y-2">
+
+                    <label class="label font-medium text-neutral/70">Select Bank</label>
+                    <select id="add-money-bank" class="select bg-base-200 border-0 rounded-4xl w-full">
+                        <option disabled selected>Select a Bank</option>
+                        <option value="MBL">Midland Bank Ltd.</option>
+                        <option value="DBBL">Dutch Bangla Bank Ltd.</option>
+                        <option value="SBL">Sonali Bank Ltd.</option>
+                    </select>
+
+                    <label class="label font-medium text-neutral/70">Bank Account Number</label>
+                    <input id="add-money-number" type="text" maxlength="11" minlength="11"
+                        class="input bg-base-200 border-0 rounded-4xl w-full" placeholder="Enter bank account number" />
+
+                    <label class="label font-medium text-neutral/70">Amount to add</label>
+                    <input id="add-money-amount" type="number"
+                        class="input bg-base-200 border-0 rounded-4xl w-full" placeholder="Enter amount to add" />
+
+                    <label class="label font-medium text-neutral/70">Pin Number</label>
+                    <input id="add-money-pin" type="password" maxlength="4"
+                        class="input bg-base-200 border-0 rounded-4xl w-full" placeholder="Enter 4 Digit Pin" />
+
+                    <button id="add-money-btn"
+                        class="btn mt-4 font-semibold text-lg btn-primary rounded-4xl shadow">Add Money</button>
+
+                </fieldset>
+            </div>
+        </div>
+    </section>
+
+    <section id="cashout" class="w-11/12 mx-auto py-7 hidden">
         <h2 class="text-lg font-semibold opacity-90 mb-4">Cashout</h2>
         <div class="card bg-base-100 w-full rounded-3xl">
             <div class="card-body">
@@ -94,19 +128,18 @@
 
                     <label class="label font-medium text-neutral/70">Agent Number</label>
                     <input id="cashout-number" type="text" maxlength="11" minlength="11"
-                        class="input bg-base-200 border-0 rounded-4xl w-full"
-                        placeholder="Enter 11 digit number" />
-                
-                    <label class="label font-medium text-neutral/70">Amount</label>
-                    <input id="cashout-amount" type="number" maxlength="11" minlength="11"
-                        class="input bg-base-200 border-0 rounded-4xl w-full"
-                        placeholder="Enter amount to withdraw" />
-                    
-                    <label class="label font-medium text-neutral/70">Pin Number</label>
-                    <input id="cashout-pin" type="password" maxlength="4" class="input bg-base-200 border-0 rounded-4xl w-full"
-                        placeholder="Enter 4 Digit Pin" />
+                        class="input bg-base-200 border-0 rounded-4xl w-full" placeholder="Enter 11 digit number" />
 
-                    <button id="cashout-btn" class="btn mt-4 font-semibold text-lg btn-primary rounded-4xl shadow">Withdraw Money</button>
+                    <label class="label font-medium text-neutral/70">Amount</label>
+                    <input id="cashout-amount" type="number"
+                        class="input bg-base-200 border-0 rounded-4xl w-full" placeholder="Enter amount to withdraw" />
+
+                    <label class="label font-medium text-neutral/70">Pin Number</label>
+                    <input id="cashout-pin" type="password" maxlength="4"
+                        class="input bg-base-200 border-0 rounded-4xl w-full" placeholder="Enter 4 Digit Pin" />
+
+                    <button id="cashout-btn"
+                        class="btn mt-4 font-semibold text-lg btn-primary rounded-4xl shadow">Withdraw Money</button>
 
                 </fieldset>
             </div>
@@ -114,6 +147,7 @@
     </section>
 
     <script src="./script/machine.js"></script>
+    <script src="./script/addMoney.js"></script>
     <script src="./script/cashout.js"></script>
 </body>
 
