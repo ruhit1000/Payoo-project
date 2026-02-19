@@ -23,18 +23,5 @@ document.getElementById('transfer-money-btn').addEventListener('click', () => {
     alert('Transfer money successful');
     setBalance(newBalance);
     resetTransferMoneyInputs();
-    const history = document.getElementById('history-container');
-    const newHistory = document.createElement('div');
-    newHistory.innerHTML = `
-            <div class="transaction-card py-3 px-4 bg-base-100 rounded-xl flex gap-2 items-center">
-                <div class="bg-base-200 p-3 rounded-full">
-                    <img src="./assets/opt-3.png" alt="">
-                </div>
-                <div>
-                    <h3 class="font-semibold text-neutral/70">Transfer Money to ${userAccountNumber}</h3>
-                    <p class="text-xs text-neutral/70">${time}</p>
-                </div>
-            </div>
-        `;
-    history.append(newHistory);
+    addToHistory(`Transfer Money to ${userAccountNumber}`, "./assets/opt-3.png");
 })

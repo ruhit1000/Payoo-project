@@ -76,18 +76,34 @@ function showOnly(id) {
     getBonus.classList.add('hidden');
     payBill.classList.add('hidden');
     transaction.classList.add('hidden');
-    
+
     const selected = document.getElementById(id);
     selected.classList.remove('hidden');
 };
 
 // Get time
-const now = new Date();
-const time = now.toLocaleString('en-GB', {
-  hour: 'numeric',
-  minute: '2-digit',
-  hour12: true,
-  day: 'numeric',
-  month: 'short',
-  year: 'numeric'
-});
+function getCurrentTime() {
+    const now = new Date();
+    return now.toLocaleString('en-GB', {
+        hour: 'numeric', minute: '2-digit', hour12: true,
+        day: 'numeric', month: 'short', year: 'numeric'
+    });
+}
+
+// Add to history
+function addToHistory(title, iconPath) {
+    const historyContainer = document.getElementById('history-container');
+    const div = document.createElement('div');
+    div.innerHTML = `
+        <div class="transaction-card py-3 px-4 bg-base-100 rounded-xl flex gap-2 items-center">
+            <div class="bg-base-200 p-3 rounded-full">
+                <img src="${iconPath}" alt="">
+            </div>
+            <div>
+                <h3 class="font-semibold text-neutral/70">${title}</h3>
+                <p class="text-xs text-neutral/70">${getCurrentTime()}</p>
+            </div>
+        </div>
+    `;
+    historyContainer.prepend(div);
+}
