@@ -55,11 +55,13 @@ function showOnly(id) {
     const addMoney = document.getElementById('add-money');
     const cashout = document.getElementById('cashout');
     const transferMoney = document.getElementById('transfer-money-form');
+    const getBonus = document.getElementById('get-bonus');
     const transaction = document.getElementById('history');
 
     addMoney.classList.add('hidden');
     cashout.classList.add('hidden');
     transferMoney.classList.add('hidden');
+    getBonus.classList.add('hidden');
     transaction.classList.add('hidden');
     
     const selected = document.getElementById(id);
