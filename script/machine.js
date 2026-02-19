@@ -18,7 +18,7 @@ function setBalance(value) {
     balanceElement.innerText = value;
 }
 
-// Reset add money input
+// Reset functions
 function resetAddMoneyInputs() {
     [
         'add-money-bank',
@@ -30,7 +30,6 @@ function resetAddMoneyInputs() {
     });
 }
 
-// Reset cashout inputs
 function resetCashoutInputs() {
     [
         'cashout-number',
@@ -41,14 +40,26 @@ function resetCashoutInputs() {
     });
 };
 
+function resetTransferMoneyInputs() {
+    [
+        'transfer-money-number',
+        'transfer-money-amount',
+        'transfer-money-pin'
+    ].forEach(id => {
+        document.getElementById(id).value = '';
+    });
+};
+
 // Menu button functionality
 function showOnly(id) {
     const addMoney = document.getElementById('add-money');
     const cashout = document.getElementById('cashout');
+    const transferMoney = document.getElementById('transfer-money-form');
     const transaction = document.getElementById('history');
 
     addMoney.classList.add('hidden');
     cashout.classList.add('hidden');
+    transferMoney.classList.add('hidden');
     transaction.classList.add('hidden');
     
     const selected = document.getElementById(id);

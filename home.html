@@ -58,15 +58,17 @@
                 charge is low and </p>
 
             <div class="buttons grid grid-cols-3 my-6 gap-4">
-                <button onclick="showOnly('add-money')" class="btn btn-outline border-gray-300 flex-col h-full py-5 rounded-xl">
+                <button onclick="showOnly('add-money')"
+                    class="btn btn-outline border-gray-300 flex-col h-full py-5 rounded-xl">
                     <img src="./assets/opt-1.png" alt="">
                     <p class="text-sm text-neutral/70 font-normal mt-1">Add Money</p>
                 </button>
-                <button onclick="showOnly('cashout')" class="btn btn-outline border-gray-300 flex-col h-full py-5 rounded-xl">
+                <button onclick="showOnly('cashout')"
+                    class="btn btn-outline border-gray-300 flex-col h-full py-5 rounded-xl">
                     <img src="./assets/opt-2.png" alt="">
                     <p class="text-sm text-neutral/70 font-normal mt-1">Cashout</p>
                 </button>
-                <button id="transfer-money" class="btn btn-outline border-gray-300 flex-col h-full py-5 rounded-xl">
+                <button onclick="showOnly('transfer-money-form')" id="transfer-money" class="btn btn-outline border-gray-300 flex-col h-full py-5 rounded-xl">
                     <img src="./assets/opt-3.png" alt="">
                     <p class="text-sm text-neutral/70 font-normal mt-1">Transfer Money</p>
                 </button>
@@ -78,7 +80,8 @@
                     <img src="./assets/opt-5.png" alt="">
                     <p class="text-sm text-neutral/70 font-normal mt-1">Pay Bill</p>
                 </button>
-                <button onclick="showOnly('history')" class="btn btn-outline border-gray-300 flex-col h-full py-5 rounded-xl">
+                <button onclick="showOnly('history')"
+                    class="btn btn-outline border-gray-300 flex-col h-full py-5 rounded-xl">
                     <img src="./assets/opt-6.png" alt="">
                     <p class="text-sm text-neutral/70 font-normal mt-1">Transactions</p>
                 </button>
@@ -105,15 +108,15 @@
                         class="input bg-base-200 border-0 rounded-4xl w-full" placeholder="Enter bank account number" />
 
                     <label class="label font-medium text-neutral/70">Amount to add</label>
-                    <input id="add-money-amount" type="number"
-                        class="input bg-base-200 border-0 rounded-4xl w-full" placeholder="Enter amount to add" />
+                    <input id="add-money-amount" type="number" class="input bg-base-200 border-0 rounded-4xl w-full"
+                        placeholder="Enter amount to add" />
 
                     <label class="label font-medium text-neutral/70">Pin Number</label>
                     <input id="add-money-pin" type="password" maxlength="4"
                         class="input bg-base-200 border-0 rounded-4xl w-full" placeholder="Enter 4 Digit Pin" />
 
-                    <button id="add-money-btn"
-                        class="btn mt-4 font-semibold text-lg btn-primary rounded-4xl shadow">Add Money</button>
+                    <button id="add-money-btn" class="btn mt-4 font-semibold text-lg btn-primary rounded-4xl shadow">Add
+                        Money</button>
 
                 </fieldset>
             </div>
@@ -131,8 +134,8 @@
                         class="input bg-base-200 border-0 rounded-4xl w-full" placeholder="Enter 11 digit number" />
 
                     <label class="label font-medium text-neutral/70">Amount</label>
-                    <input id="cashout-amount" type="number"
-                        class="input bg-base-200 border-0 rounded-4xl w-full" placeholder="Enter amount to withdraw" />
+                    <input id="cashout-amount" type="number" class="input bg-base-200 border-0 rounded-4xl w-full"
+                        placeholder="Enter amount to withdraw" />
 
                     <label class="label font-medium text-neutral/70">Pin Number</label>
                     <input id="cashout-pin" type="password" maxlength="4"
@@ -140,6 +143,32 @@
 
                     <button id="cashout-btn"
                         class="btn mt-4 font-semibold text-lg btn-primary rounded-4xl shadow">Withdraw Money</button>
+
+                </fieldset>
+            </div>
+        </div>
+    </section>
+
+    <section id="transfer-money-form" class="w-11/12 mx-auto py-7 hidden">
+        <h2 class="text-lg font-semibold opacity-90 mb-4">Transfer Money</h2>
+        <div class="card bg-base-100 w-full rounded-3xl">
+            <div class="card-body">
+                <fieldset class="fieldset space-y-2">
+
+                    <label class="label font-medium text-neutral/70">User Account Number</label>
+                    <input id="transfer-money-number" type="text" maxlength="11" minlength="11"
+                        class="input bg-base-200 border-0 rounded-4xl w-full" placeholder="Enter 11 digit number" />
+
+                    <label class="label font-medium text-neutral/70">Amount</label>
+                    <input id="transfer-money-amount" type="number" class="input bg-base-200 border-0 rounded-4xl w-full"
+                        placeholder="Enter amount to transfer" />
+
+                    <label class="label font-medium text-neutral/70">Pin Number</label>
+                    <input id="transfer-money-pin" type="password" maxlength="4"
+                        class="input bg-base-200 border-0 rounded-4xl w-full" placeholder="Enter 4 Digit Pin" />
+
+                    <button id="transfer-money-btn"
+                        class="btn mt-4 font-semibold text-lg btn-primary rounded-4xl shadow">Transfer Money</button>
 
                 </fieldset>
             </div>
@@ -164,6 +193,7 @@
     <script src="./script/machine.js"></script>
     <script src="./script/addMoney.js"></script>
     <script src="./script/cashout.js"></script>
+    <script src="./script/transferMoney.js"></script>
 </body>
 
 </html>
