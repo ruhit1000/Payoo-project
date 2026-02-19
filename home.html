@@ -73,11 +73,12 @@
                     <img src="./assets/opt-3.png" alt="">
                     <p class="text-sm text-neutral/70 font-normal mt-1">Transfer Money</p>
                 </button>
-                <button onclick="showOnly('get-bonus')" class="btn btn-outline border-gray-300 flex-col h-full py-5 rounded-xl">
+                <button onclick="showOnly('get-bonus')"
+                    class="btn btn-outline border-gray-300 flex-col h-full py-5 rounded-xl">
                     <img src="./assets/opt-4.png" alt="">
                     <p class="text-sm text-neutral/70 font-normal mt-1">Get Bonus</p>
                 </button>
-                <button class="btn btn-outline border-gray-300 flex-col h-full py-5 rounded-xl">
+                <button onclick="showOnly('pay-bill')" class="btn btn-outline border-gray-300 flex-col h-full py-5 rounded-xl">
                     <img src="./assets/opt-5.png" alt="">
                     <p class="text-sm text-neutral/70 font-normal mt-1">Pay Bill</p>
                 </button>
@@ -183,11 +184,44 @@
                 <fieldset class="fieldset space-y-2">
 
                     <label class="label font-medium text-neutral/70">Enter Bonus Coupon</label>
-                    <input id="bonus-coupon" type="text"
-                        class="input bg-base-200 border-0 rounded-4xl w-full" placeholder="Enter your coupon" />
+                    <input id="bonus-coupon" type="text" class="input bg-base-200 border-0 rounded-4xl w-full"
+                        placeholder="Enter your coupon" />
 
-                    <button id="get-bonus-btn"
-                        class="btn mt-4 font-semibold text-lg btn-primary rounded-4xl shadow">Get Bonus</button>
+                    <button id="get-bonus-btn" class="btn mt-4 font-semibold text-lg btn-primary rounded-4xl shadow">Get
+                        Bonus</button>
+
+                </fieldset>
+            </div>
+        </div>
+    </section>
+
+    <section id="pay-bill" class="w-11/12 mx-auto py-7 hidden">
+        <h2 class="text-lg font-semibold opacity-90 mb-4">Pay Bill</h2>
+        <div class="card bg-base-100 w-full rounded-3xl">
+            <div class="card-body">
+                <fieldset class="fieldset space-y-2">
+
+                    <label class="label font-medium text-neutral/70">Select To Pay</label>
+                    <select id="pay-bill-select" class="select bg-base-200 border-0 rounded-4xl w-full">
+                        <option disabled selected>Select a Bank</option>
+                        <option value="MBL">Midland Bank Ltd.</option>
+                        <option value="DBBL">Dutch Bangla Bank Ltd.</option>
+                        <option value="SBL">Sonali Bank Ltd.</option>
+                    </select>
+
+                    <label class="label font-medium text-neutral/70">Biller Account Number</label>
+                    <input id="biller-account-number" type="text" maxlength="11" minlength="11"
+                        class="input bg-base-200 border-0 rounded-4xl w-full" placeholder="Enter account number" />
+
+                    <label class="label font-medium text-neutral/70">Amount to pay</label>
+                    <input id="pay-bill-amount" type="number" class="input bg-base-200 border-0 rounded-4xl w-full"
+                        placeholder="Enter amount to pay" />
+
+                    <label class="label font-medium text-neutral/70">Pin Number</label>
+                    <input id="pay-bill-pin" type="password" maxlength="4"
+                        class="input bg-base-200 border-0 rounded-4xl w-full" placeholder="Enter 4 Digit Pin" />
+
+                    <button id="pay-bill-btn" class="btn mt-4 font-semibold text-lg btn-primary rounded-4xl shadow">Pay Bill</button>
 
                 </fieldset>
             </div>
@@ -214,6 +248,7 @@
     <script src="./script/cashout.js"></script>
     <script src="./script/transferMoney.js"></script>
     <script src="./script/getBonus.js"></script>
+    <script src="./script/payBill.js"></script>
 </body>
 
 </html>

@@ -7,5 +7,5 @@ document.getElementById('login-btn').addEventListener('click', () => {
     } else {
         alert('Invalid credentials');
         return;
-    }
+    };
 });

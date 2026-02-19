@@ -3,7 +3,7 @@ function getValueFromInput(id) {
     const input = document.getElementById(id);
     const value = input.value;
     return value;
-}
+};
 
 // Get current balance
 function getBalance() {
@@ -16,7 +16,7 @@ function getBalance() {
 function setBalance(value) {
     const balanceElement = document.getElementById('balance');
     balanceElement.innerText = value;
-}
+};
 
 // Reset functions
 function resetAddMoneyInputs() {
@@ -28,7 +28,7 @@ function resetAddMoneyInputs() {
     ].forEach(id => {
         document.getElementById(id).value = '';
     });
-}
+};
 
 function resetCashoutInputs() {
     [
@@ -50,18 +50,31 @@ function resetTransferMoneyInputs() {
     });
 };
 
+function resetPayBillInputs() {
+    [
+        'pay-bill-select',
+        'biller-account-number',
+        'pay-bill-amount',
+        'pay-bill-pin'
+    ].forEach(id => {
+        document.getElementById(id).value = '';
+    });
+};
+
 // Menu button functionality
 function showOnly(id) {
     const addMoney = document.getElementById('add-money');
     const cashout = document.getElementById('cashout');
     const transferMoney = document.getElementById('transfer-money-form');
     const getBonus = document.getElementById('get-bonus');
+    const payBill = document.getElementById('pay-bill');
     const transaction = document.getElementById('history');
 
     addMoney.classList.add('hidden');
     cashout.classList.add('hidden');
     transferMoney.classList.add('hidden');
     getBonus.classList.add('hidden');
+    payBill.classList.add('hidden');
     transaction.classList.add('hidden');
     
     const selected = document.getElementById(id);
